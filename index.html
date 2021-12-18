@@ -108,6 +108,7 @@ textarea {
 .main {
   padding: 20px;
 }
+/* Utility class */
 .hidden {
   display: none;
 }
@@ -128,6 +129,20 @@ textarea {
   }
 }
 
+/* footer */
+footer {
+  background-color: darkorange;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  bottom: 0%;
+  height: 13vh;
+  flex-direction: column;
+  text-align: center;
+}
     </style>
 </head>
 <body>
@@ -214,6 +229,16 @@ if(NotesData){
     })
 }
 addBtn.addEventListener('click',()=>addNewNotes());
+//Add footer to the code
+const footer=document.createElement('footer');
+
+const htmlData=`        <p>Devloped By suvampanigrahi</p> <br />
+<p>All fonts and svg &copy; from fontawsome.com<br /> All Rights reserved</p>`;
+footer.insertAdjacentHTML('afterbegin',htmlData);
+
+document.body.append(footer);
+
+
     </script>
 </body>
 </html>
